@@ -1,0 +1,19 @@
+---
+services:
+  duckdns:
+    image: lscr.io/linuxserver/duckdns
+    container_name: duckdns
+    network_mode: host #optional
+    environment:
+      - PUID=1000 #optional
+      - PGID=1000 #optional
+      - TZ=Asia/Kolkata #optional
+      - SUBDOMAINS=
+      - TOKEN=
+      - LOG_FILE=true #optional
+    volumes:
+      - ./config:/config #optional
+    dns:
+        - 1.1.1.1  
+        - 8.8.8.8
+    restart: unless-stopped

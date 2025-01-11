@@ -1,0 +1,19 @@
+---
+services:
+  deluge:
+    image: linuxserver/deluge
+    container_name: deluge
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Kolkata
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - ./:/config
+      - /downloads:/downloads
+      - /movies:/movies
+      - /tv:/tv
+    ports:
+      - 8112:8112
+    restart: unless-stopped
+
