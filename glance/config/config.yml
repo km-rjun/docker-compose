@@ -1,6 +1,5 @@
 pages:
   - name: Home
-    # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
     hide-desktop-navigation: false
     columns:
       - size: small
@@ -13,7 +12,6 @@ pages:
                 mountpoints:
                   /mnt/data:
                     hide: false
-
           - type: group
             widgets:
               - type: reddit
@@ -22,111 +20,101 @@ pages:
               - type: reddit
                 subreddit: selfhosted
                 show-thumbnails: true
-
       - size: full
         widgets:
           - type: search
             autofocus: true
             search-engine: google
             new-tab: true
-
           - type: monitor
             cache: 1m
             title: Services
             sites:
               - title: Proxmox
-                url: http://proxmox.local:8006
-                icon: di:proxmox
+                url: 'https://proxmox.rjun.fyi'
+                icon: 'di:proxmox'
+              - title: Pangolin
+                url: 'https://Pangolin.rjun.fyi'
+                icon: 'di:pangolin'
               - title: Portainer
-                url: http://portainer.local
-                icon: di:portainer
+                url: 'https://portainer.rjun.fyi'
+                icon: 'di:portainer'
               - title: Wiregaurd
-                url: http://wireguard.local
-                icon: di:wireguard
+                url: 'http://wireguard.local'
+                icon: 'di:wireguard'
               - title: Jellyfin
-                url: http://jellyfin.local
-                icon: di:jellyfin
+                url: 'https://jellyfin.rjun.fyi'
+                icon: 'di:jellyfin'
               - title: Nextcloud
-                url: http://nextcloud.local
-                icon: di:nextcloud
+                url: 'http://nextcloud.local'
+                icon: 'di:nextcloud'
               - title: Immich
-                url: http://immich.local
-                icon: di:immich
+                url: 'http://immich.local'
+                icon: 'di:immich'
               - title: Kasm
-                url: https://kasm.local
-                icon: di:kasm
+                url: 'https://kasm.rjun.fyi'
+                icon: 'di:kasm'
               - title: Deluge
-                url: http://deluge.local
-                icon: di:deluge
+                url: 'http://deluge.local'
+                icon: 'di:deluge'
               - title: HomeAssistant
-                url: http://homeassistant.local
-                icon: di:home-assistant
+                url: 'http://homeassistant.local'
+                icon: 'di:home-assistant'
               - title: Open-WebUI
-                url: http://mygpt.local
-                icon: di:chatgpt
+                url: 'https://ollama.rjun.fyi'
+                icon: 'di:chatgpt'
               - title: IT-Tools
-                url: http://it-tools.local
-                icon: di:it-tools
+                url: 'http://it-tools.local'
+                icon: 'di:it-tools'
+              - title: Omni-Tools
+                url: 'http://omni-tools.local'
+                icon: 'si:conventionalcommits'
               - title: Pi-Hole
-                url: http://pihole.local/admin
-                icon: di:pi-hole
+                url: 'http://pihole.local/admin'
+                icon: 'di:pi-hole'
               - title: Nginx-Proxy-Manager
-                url: http://nginx.local/
-                icon: di:nginx-proxy-manager
-
+                url: 'http://nginx.local/'
+                icon: 'di:nginx-proxy-manager'
           - type: videos
             channels:
-              - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
-              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
-              - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
-              - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
-
+              - UCXuqSBlHAE6Xw-yeJA0Tunw
+              - UCR-DXc1voovS8nhAvccRZhg
+              - UCBJycsmduvYEL83R_U4JriQ
+              - UCHnyfMqiRRG1u-2MsSQLbXA
           - type: bookmarks
             groups:
               - title: General
                 links:
                   - title: Gmail
-                    url: https://mail.google.com/mail/u/0/
+                    url: 'https://mail.google.com/mail/u/0/'
                   - title: Amazon
-                    url: https://www.amazon.in/
+                    url: 'https://www.amazon.in/'
                   - title: Github
-                    url: https://github.com/
+                    url: 'https://github.com/'
               - title: Entertainment
                 links:
                   - title: YouTube
-                    url: https://www.youtube.com/
+                    url: 'https://www.youtube.com/'
                   - title: Prime Video
-                    url: https://www.primevideo.com/
+                    url: 'https://www.primevideo.com/'
                   - title: Disney+
-                    url: https://www.disneyplus.com/
+                    url: 'https://www.disneyplus.com/'
               - title: Social
                 links:
                   - title: Reddit
-                    url: https://www.reddit.com/
+                    url: 'https://www.reddit.com/'
                   - title: Twitter
-                    url: https://twitter.com/
+                    url: 'https://twitter.com/'
                   - title: Instagram
-                    url: https://www.instagram.com/
-
+                    url: 'https://www.instagram.com/'
       - size: small
         widgets:
-          # - type: dns-stats
-          #   service: pihole
-          #   url: http://pihole.local/
-          #   allow-insecure: true
-          #   password: pidnspassword
-
           - type: clock
             hour-format: 24h
-
           - type: calendar
             first-day-of-week: monday
-
           - type: releases
             cache: 1d
-            # Without authentication the Github API allows for up to 60 requests per hour. You can create a
-            # read-only token from your Github account settings and use it here to increase the limit.
-            # token: ...
             repositories:
               - glanceapp/glanceapp
               - jellyfin/jellyfin
@@ -135,141 +123,5 @@ pages:
               - wg-easy/wg-easy
               - NginxProxyManager/Nginx-Proxy-Manager
               - portainer/portainer
-              - dockerhub:homeassistant/home-assistant:stablepages:
-  - name: Home
-    # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
-    hide-desktop-navigation: false
-    columns:
-      - size: small
-        widgets:
-          - type: server-stats
-            servers:
-              - type: local
-                name: DEBOCKER
-                hide-mountpoints-by-default: true
-                mountpoints:
-                  /mnt/data:
-                    hide: false
+              - 'dockerhub:homeassistant/home-assistant:stable'
 
-          - type: group
-            widgets:
-              - type: reddit
-                subreddit: technology
-                show-thumbnails: true
-              - type: reddit
-                subreddit: selfhosted
-                show-thumbnails: true
-
-      - size: full
-        widgets:
-          - type: search
-            autofocus: true
-            search-engine: google
-            new-tab: true
-
-          - type: monitor
-            cache: 1m
-            title: Services
-            sites:
-              - title: Proxmox
-                url: http://proxmox.local:8006
-                icon: di:proxmox
-              - title: Portainer
-                url: http://portainer.local
-                icon: di:portainer
-              - title: Wiregaurd
-                url: http://wireguard.local
-                icon: di:wireguard
-              - title: Jellyfin
-                url: http://jellyfin.local
-                icon: di:jellyfin
-              - title: Nextcloud
-                url: http://nextcloud.local
-                icon: di:nextcloud
-              - title: Immich
-                url: http://immich.local
-                icon: di:immich
-              - title: Kasm
-                url: https://kasm.local
-                icon: di:kasm
-              - title: Deluge
-                url: http://deluge.local
-                icon: di:deluge
-              - title: HomeAssistant
-                url: http://homeassistant.local
-                icon: di:home-assistant
-              - title: Open-WebUI
-                url: http://mygpt.local
-                icon: di:chatgpt
-              - title: IT-Tools
-                url: http://it-tools.local
-                icon: di:it-tools
-              - title: Pi-Hole
-                url: http://pihole.local/admin
-                icon: di:pi-hole
-              - title: Nginx-Proxy-Manager
-                url: http://nginx.local/
-                icon: di:nginx-proxy-manager
-
-          - type: videos
-            channels:
-              - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
-              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
-              - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
-              - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
-
-          - type: bookmarks
-            groups:
-              - title: General
-                links:
-                  - title: Gmail
-                    url: https://mail.google.com/mail/u/0/
-                  - title: Amazon
-                    url: https://www.amazon.in/
-                  - title: Github
-                    url: https://github.com/
-              - title: Entertainment
-                links:
-                  - title: YouTube
-                    url: https://www.youtube.com/
-                  - title: Prime Video
-                    url: https://www.primevideo.com/
-                  - title: Disney+
-                    url: https://www.disneyplus.com/
-              - title: Social
-                links:
-                  - title: Reddit
-                    url: https://www.reddit.com/
-                  - title: Twitter
-                    url: https://twitter.com/
-                  - title: Instagram
-                    url: https://www.instagram.com/
-
-      - size: small
-        widgets:
-          # - type: dns-stats
-          #   service: pihole
-          #   url: http://pihole.local/
-          #   allow-insecure: true
-          #   password: pidnspassword
-
-          - type: clock
-            hour-format: 24h
-
-          - type: calendar
-            first-day-of-week: monday
-
-          - type: releases
-            cache: 1d
-            # Without authentication the Github API allows for up to 60 requests per hour. You can create a
-            # read-only token from your Github account settings and use it here to increase the limit.
-            # token: ...
-            repositories:
-              - glanceapp/glanceapp
-              - jellyfin/jellyfin
-              - pi-hole/pi-hole
-              - open-webui/open-webui
-              - wg-easy/wg-easy
-              - NginxProxyManager/Nginx-Proxy-Manager
-              - portainer/portainer
-              - dockerhub:homeassistant/home-assistant:stable
