@@ -3,7 +3,7 @@ services:
     image: "mietzen/porkbun-ddns:latest"
     container_name: porkbun-ddns
     environment:
-      DOMAIN: "rjun.fyi" # Your Porkbun domain
+      DOMAIN: "" # Your Porkbun domain
       SUBDOMAINS: "@,*" # Subdomains comma spreaded
       SECRETAPIKEY: "" # Your Porkbun Secret-API-Key
       APIKEY: "" # Your Porkbun API-Key
