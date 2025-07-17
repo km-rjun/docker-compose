@@ -8,6 +8,6 @@ services:
     environment:
       EULA: "TRUE"
     volumes:
-      - /appdata/minecraft:/data
+      - ./minecraft:/data
     restart:
       unless-stopped
