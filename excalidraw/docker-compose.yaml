@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  excalidraw:
+    image: docker.io/excalidraw/excalidraw:latest
+    ports:
+      - 8766:80
+    restart: unless-stopped
